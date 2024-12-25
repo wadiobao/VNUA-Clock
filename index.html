@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>FlipClock</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.7/flipclock.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="countdown-wrapper" >
+  <div class="header">
+    <img src="logo.png" alt="Logo" class="logo">
+    <div class="title">
+      <h1 class="main-title">CHUNG KẾT</h1>
+      <h2 class="sub-title">KHỞI NGHIỆP NÔNG NGHIỆP<br>ĐỔI MỚI SÁNG TẠO 2024</h2>
+    </div>
+  </div>
+  <div id="countdown" class="countdown"></div>
+  
+  <div class="controls-container" style="margin-top: 100px;">
+    <div class="controls">
+      <button id="startBtn" class="control-btn">Bắt đầu</button>
+    </div>
+    
+    <div class="settings">
+      <div class="time-input">
+        <label for="minutesInput">Phút:</label>
+        <input type="number" id="minutesInput" min="0" max="60" value="15">
+        <label for="secondsInput">Giây:</label>
+        <input type="number" id="secondsInput" min="0" max="59" value="0">
+      </div>
+      <button id="setTimeBtn" class="control-btn">Cập nhật thời gian</button>
+    </div>
+  </div>
+
+  <audio id="sound10s" src="sound/10s.mp3" preload="auto"></audio>
+  <audio id="sound3s" src="sound/3s.mp3" preload="auto"></audio>
+  <audio id="sound0s" src="sound/0s.mp3" preload="auto"></audio>
+</div>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.7/flipclock.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

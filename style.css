@@ -1,0 +1,202 @@
+.countdown-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1200px;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+.countdown.flip-clock-wrapper ul {
+  height: 200px;
+  width: 150px;
+  margin: 0 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.countdown.flip-clock-wrapper ul li {
+  line-height: 200px;
+}
+
+.countdown.flip-clock-wrapper ul li a div div.inn {
+  background-color: #black;
+  color: #white;
+  font-size: 160px;
+  text-shadow: 0 2px 4px #000;
+}
+
+.countdown.flip-clock-wrapper ul,
+.countdown.flip-clock-wrapper ul li a div div.inn {
+  border-radius: 8px;
+}
+
+.countdown.flip-clock-wrapper ul li a div.down {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.countdown.flip-clock-wrapper ul li a div.up:after {
+  top: 100px;
+}
+
+.countdown .flip-clock-dot.top {
+  top: 60px;
+}
+
+.countdown .flip-clock-dot.bottom {
+  top: 120px;
+}
+
+.countdown .flip-clock-dot {
+  height: 40px;
+  left: 40px;
+  width: 40px;
+  background: #black;
+}
+
+.countdown .flip-clock-divider {
+  height: 200px;
+  width: 120px;
+}
+.countdown .flip-clock-divider:first-child {
+  width: 0;
+}
+
+.countdown .flip-clock-divider.seconds .flip-clock-label,
+.countdown .flip-clock-divider.minutes .flip-clock-label {
+  right: -232px;
+}
+
+.countdown .flip-clock-divider .flip-clock-label {
+  color: white;
+  font-size: 30px;
+  width: 232px;
+}
+
+.controls-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  position: relative;
+}
+
+.controls {
+  text-align: center;
+  margin-top: 60px;
+  flex-shrink: 0;
+}
+
+.control-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 0 10px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.control-btn:hover {
+  background-color: #555;
+}
+
+.settings {
+  margin-top: 40px;
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.time-input {
+  margin-bottom: 15px;
+}
+
+.time-input label {
+  color: white;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.time-input input {
+  width: 60px;
+  padding: 5px;
+  font-size: 16px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 4px;
+  background: #fff;
+  text-align: center;
+}
+
+.time-input input:focus {
+  outline: 2px solid #555;
+}
+
+/* Ngăn chặn mũi tên tăng giảm mặc định của input number */
+.time-input input::-webkit-inner-spin-button,
+.time-input input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.time-input input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.title {
+  color: #000;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 42px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  color: #C41E3A;
+}
+
+.sub-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  color: #228B22;
+  line-height: 1.4;
+}
+
+/* Thêm class để ẩn các nút */
+.controls.hidden,
+.settings.hidden {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
